@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Codexia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Codexia</h1>
+    <p>AI-powered, context-aware code refactoring assistant</p>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="container">
+
+    <!-- Code Section -->
+    <div class="code-box">
+      <h2>Code Under Review</h2>
+      <pre><code>
+def process_csv(filename):
+    data = open(filename, 'r')
+
+    for line in data:
+        values = line.split(',')
+        result = []
+        for v in values:
+            if v.strip():
+                result.append(v.lower())
+
+        print(result)
+
+    return result
+      </code></pre>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="side-panel">
+
+      <div class="issue">
+        <h2>Issue Detected</h2>
+        <p><strong>Issue:</strong> Long Method</p>
+        <p><strong>Lines:</strong> 3 – 14</p>
+        <p><strong>Impact:</strong> Hard to maintain & debug</p>
+      </div>
+
+      <div class="suggestion">
+        <h2>Refactoring Suggestion</h2>
+        <p><strong>Suggestion:</strong> Extract Method</p>
+        <p><strong>Why this helps:</strong><br>
+          Improves readability, reuse, and testability without changing logic.
+        </p>
+
+        <button class="apply">Apply Refactor</button>
+        <button class="ignore">Ignore</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    Team Bug Buster • Codexia • Hackathon 2025
+  </footer>
+
+</body>
+</html>
+
+body {
+  font-family: Poppins, Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 25px;
+  background: white;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+header p {
+  color: #555;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+}
+
+.code-box {
+  flex: 2;
+  background: #1e1e1e;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.code-box h2 {
+  margin-top: 0;
+  color: #ccc;
+}
+
+pre {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  overflow-x: auto;
+}
+
+.side-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.issue, .suggestion {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.issue {
+  border-left: 5px solid #ff5c5c;
+}
+
+.suggestion {
+  border-left: 5px solid #4caf50;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.apply {
+  background: #3b82f6;
+  color: white;
+}
+
+.ignore {
+  background: #e5e7eb;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #777;
+}
